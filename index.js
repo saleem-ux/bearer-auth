@@ -1,11 +1,13 @@
 'use strict';
+// 3rd party modules
+require('dotenv').config()
 
-// Start up DB Server
-require('dotenv').config();
-const { db } = require('./src/auth/models/index.js');
-db.sync()
-    .then(() => {
+// internal modules
+const server = require('./src/server');
+const { db } = require('./src/auth/models/index'); //destructuring es6
 
-        // Start the web server
-        require('./src/server').startup(process.env.PORT);
-    });
+
+db.sync().then(() => {
+    server.start(process.env.PORT || 3000);
+})
+    .catch(console.error);
