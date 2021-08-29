@@ -5,15 +5,16 @@
 ## Links and Resources:
  ### Heroku:
 
-https://bearerau.herokuapp.com/
+![Heroku](https://bearerau.herokuapp.com/)
 
 * ### Github Actions:
 
--https://github.com/saleem-ux/bearer-auth/actions
+![Actions](https://github.com/saleem-ux/bearer-auth/actions)
+
 
 * ### pull request :
 
-- https://github.com/saleem-ux/bearer-auth/pull/2
+![PR](https://github.com/saleem-ux/bearer-auth/pull/2)
 
 
 ## Setup 
