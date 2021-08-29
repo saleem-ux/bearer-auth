@@ -13,6 +13,12 @@ const authRoutes = require('./auth/routes.js');
 // Prepare the express app
 const app = express();
 
+
+app.get('/', lifeProof);
+function lifeProof(req, res) {
+  res.status(200).json('HELLO WORLD 😎!');
+}
+
 // App Level MW
 app.use(cors());
 app.use(morgan('dev'));
@@ -28,8 +34,8 @@ app.use(notFound);
 app.use(errorHandler);
 
 module.exports = {
-  server: app,
-  startup: (port) => {
+server: app,
+  start: (port) => {
     app.listen(port, () => {
       console.log(`Server Up on ${port}`);
     });

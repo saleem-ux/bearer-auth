@@ -10,16 +10,7 @@ let userInfo = {
   admin: { username: 'admin', password: 'password' },
 };
 
-// Pre-load our database with fake users
-beforeAll(async (done) => {
-  await db.sync();
-  await users.create(userInfo.admin);
-  done();
-});
-afterAll(async (done) => {
-  await db.drop();
-  done();
-});
+
 
 describe('Auth Middleware', () => {
 
